@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+---Electricity Bill Estimator App---+"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/primary_text"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Month Spinner -->
+        <TextView android:text="Month" style="@style/Label"/>
+        <Spinner
+            android:id="@+id/spinnerMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Units -->
+        <TextView android:text="Units used (kWh)" style="@style/Label"/>
+        <EditText
+            android:id="@+id/editUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="1 - 1000"
+            android:digits="0123456789"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valid range: 1 to 1000 kWh"
+            android:textSize="12sp"
+            android:textColor="@color/hint_text"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Rebate SeekBar -->
+        <TextView android:text="Rebate percentage (%)" style="@style/Label"/>
+        <SeekBar
+            android:id="@+id/seekRebate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="0"/>
+        <TextView
+            android:id="@+id/txtRebateValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate &amp; Save"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white"/>
+
+        <!-- Results -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Results"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/txtTotal"
+            style="@style/ResultText"/>
+        <TextView
+            android:id="@+id/txtFinal"
+            style="@style/ResultText"/>
+
+        <!-- Navigation Buttons -->
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View History"
+            android:backgroundTint="@color/secondary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:backgroundTint="#9C27B0"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="© 2026 Azib Izzudin"
+            android:textSize="12sp"
+            android:textColor="@color/hint_text"
+            android:gravity="center"
+            android:layout_marginTop="170dp"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

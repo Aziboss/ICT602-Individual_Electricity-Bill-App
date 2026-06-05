@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Bill Details"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Month (Spinner) -->
+        <TextView android:text="Month" style="@style/Label"/>
+        <Spinner
+            android:id="@+id/spinnerMonthDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Units -->
+        <TextView android:text="Units (kWh)" style="@style/Label"/>
+        <EditText
+            android:id="@+id/editUnitsDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Rebate -->
+        <TextView android:text="Rebate (%)" style="@style/Label"/>
+        <EditText
+            android:id="@+id/editRebateDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Total Charges (read‑only) -->
+        <TextView android:text="Total Charges" style="@style/Label"/>
+        <TextView
+            android:id="@+id/txtTotalDetail"
+            style="@style/ResultText"/>
+
+        <!-- Final Cost (read‑only) -->
+        <TextView android:text="Final Cost" style="@style/Label"/>
+        <TextView
+            android:id="@+id/txtFinalDetail"
+            style="@style/ResultText"/>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btnActionDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#4CAF50"/>
+
+            <Button
+                android:id="@+id/btnBackDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Back"
+                android:backgroundTint="#757575"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
